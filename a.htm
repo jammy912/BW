@@ -1,0 +1,79 @@
+<html>
+<head>
+    
+<script type="text/javascript" language="javascript">
+    function js()
+    {
+      var intStarHour = parseInt(document.getElementById('StartHour').value);
+      var intStartMin =  parseInt(document.getElementById('StartMin').value);
+      var intEndHour =  parseInt(document.getElementById('EndHour').value);
+      var intEndMin =  parseInt(document.getElementById('EndMin').value);
+      var varYoutubeID = document.getElementById('ddlSection').value;
+      
+      var intTotalStartMin =0;
+      var intTotalEndMin =0;
+      
+      intTotalStartMin = (intStarHour*60) + intStartMin;
+      intTotalEndMin = (intEndHour*60) + intEndMin; 
+        
+      document.getElementById("TTT").value='https://www.youtube.com/embed/'+ varYoutubeID +'?autoplay=1&start='+ intTotalStartMin+'&end='+intTotalEndMin;
+    }
+</script>
+
+    <style type="text/css">
+        #TTT
+        {
+            font-size: medium;
+            width: 707px;
+        }
+        #StartHour
+        {
+            font-size: medium;
+        }
+        #StartMin
+        {
+            font-size: medium;
+        }
+        #EndHour
+        {
+            font-size: medium;
+        }
+        #EndMin
+        {
+            font-size: medium;
+        }
+    </style>
+
+</head>
+
+<body style="font-family: 微軟正黑體; font-size: larger">
+    舊版廣論<br />
+    <select style="width: 701px; font-size: large" id="ddlSection">
+        <option value="01A">01A</option> 
+        <option value="01B">01B</option> 
+        <option value="02A">02A</option> 
+        <option value="02B">02B</option> 
+        <option value="m68DLfhBWTE">057B - 廣論-P135L13~P136L5-深信業果 </option> 
+        <option value="LnmuMOK0SKg">060B - 廣論-P141L5~P141L11-深信業果  </option> 
+    </select> <br /><br />
+    
+    開始時間<input type="text" size="5" value="0" id="StartHour"/>
+    <input type="text" size="5" value="0" id="StartMin" />~
+    結束時間<input type="text" size="5" value="0" id="EndHour" />
+    <input type="text" size="5" value="0" id="EndMin" />
+    
+    
+    <br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" value="取得連結" onclick="js();" 
+        style="text-align: center; font-size: x-large"/>
+    
+    <br />
+    <br />
+    <input type="text" size="100" id="TTT"  />
+     
+
+</body>
+
+</html>
