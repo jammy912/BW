@@ -14,14 +14,18 @@ function getParameterByName(name, url) {
 }
 
 
-var foo = getParameterByName('foo');
-alert(foo);
+var varYoutubeID = getParameterByName('YoutubeID');
+var varSart = getParameterByName('start');
+var varEnd = getParameterByName('end');
+
+
+document.getElementById('youtubeplay').src = 'https://www.youtube.com/embed/'+ YoutubeID + '?autoplay=1&start='+ varSart +'&end=' + varEnd;
 
 </script>
 
-<frameset cols="25%,50%,25%">
+<frameset cols="0%,0%,100%">
    <frame src="frame_a.htm">
    <frame src="frame_b.htm">
-   <frame src="https://www.youtube.com/embed/Z74qsXzFc08?autoplay=1&start=60&end=64">
+   <frame id='youtubeplay' src="">
 </frameset> 
 
