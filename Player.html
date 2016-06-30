@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<script type="text/javascript" language="javascript">
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+var foo = getParameterByName('foo');
+alert(foo);
+
+</script>
+
+<frameset cols="25%,50%,25%">
+   <frame src="frame_a.htm">
+   <frame src="frame_b.htm">
+   <frame src="https://www.youtube.com/embed/Z74qsXzFc08?autoplay=1&start=60&end=64">
+</frameset> 
+
