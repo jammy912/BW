@@ -19,13 +19,16 @@ var varSart = getParameterByName('start');
 var varEnd = getParameterByName('end');
 
 
+
 document.getElementById('youtubeplay').src = 'https://www.youtube.com/embed/'+ YoutubeID + '?autoplay=1&start='+ varSart +'&end=' + varEnd;
+
+alert(document.getElementById('youtubeplay').src);
 
 </script>
 
 <frameset cols="0%,0%,100%">
    <frame src="frame_a.htm">
    <frame src="frame_b.htm">
-   <frame id='youtubeplay' src="">
+   <frame id="youtubeplay" src="">
 </frameset> 
 
